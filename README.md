@@ -1,20 +1,19 @@
-# 🎧 Modulated Audio Signal Processing
+# Modulated Audio Signal Processing
 
-## 📌 Objective
+## Objective
 This project involves processing an amplitude-modulated (AM) audio signal to recover the original clean audio. Key steps include estimating the carrier frequency, demodulating the signal, applying a bandpass filter, and saving the cleaned result.
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 - **Python 3**
 - **NumPy**
 - **SciPy**
 - **Matplotlib**
-- **Jupyter Notebook (optional for visualization)**
 
 ---
 
-## 📂 Files
+##  Files
 - `modulated_signal.wav` – Input AM audio file.
 - `filtered_output.wav` – Cleaned, filtered output audio.
 - `process_signal.py` – Python script that performs the entire workflow.
@@ -22,7 +21,7 @@ This project involves processing an amplitude-modulated (AM) audio signal to rec
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Install dependencies:
    ```bash
@@ -69,6 +68,8 @@ plt.show()
 peak_index = np.argmax(yf)
 fc = xf[peak_index]
 print(f"Estimated Carrier Frequency Fc: {fc:.2f} Hz")
+
+# Estimated Carrier Frequency (Fc): 10582.31 Hz
 
 # 3. Demodulate using envelope detection
 analytic_signal = hilbert(data)
